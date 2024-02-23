@@ -11,8 +11,19 @@ public class Cliente {
     public Long numeroDocumento;
     public Long celular;
 
-    public List<carro> misCarros = new ArrayList<carro>(); 
+    public List<Car> misCarros;
 
+
+
+
+    public Cliente(String nombre, String apellidos, TipoDocumento tipoDocumento, Long numeroDocumento, Long celular) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.tipoDocumento = tipoDocumento;
+        this.numeroDocumento = numeroDocumento;
+        this.celular = celular;
+        this.misCarros = new ArrayList<Car>();
+    }
 
     //metodo 1: añadir carro al cliente
     //definir metodo(frima del metodo - Signature):
@@ -22,14 +33,14 @@ public class Cliente {
     // paramentros (Entradas, inputs)
     //     1. Tipo de dato del parametro
     //     2. nombre del parametro
-    public void addCar(carro c){
+    public void addCar(Car c){
         this.misCarros.add(c);
     }
 
     //sobrecarga del metodo addCar
     public void addCar( String placa, TipoVehiculo tipoVehiculo){
         //construir)(instanciar)
-        carro c = new carro();
+        Car c = new Car();
         c.placa = placa;
         c.tipoVehiculo = tipoVehiculo;
         this.misCarros.add(c);
