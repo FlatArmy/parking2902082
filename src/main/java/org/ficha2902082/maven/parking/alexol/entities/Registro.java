@@ -14,13 +14,14 @@ public class Registro {
     //atributos de relacion
     public Car carro;
     public Cupo cupo;
+    public Empleado empleado;
     
     //Constructor por defecto
     public Registro() {
     }
     //Constructor parametrizado
     public Registro(LocalDate fechaInicio, LocalTime horaInicio, LocalDate fechaFin, LocalTime horaFin, Double valor,
-            Car carro, Cupo cupo) {
+            Car carro, Cupo cupo, Empleado empleado){
         this.fechaInicio = fechaInicio;
         this.horaInicio = horaInicio;
         this.fechaFin = fechaFin;
@@ -28,6 +29,7 @@ public class Registro {
         this.valor = valor;
         this.carro = carro;
         this.cupo = cupo;
+        this.empleado = empleado;
     }
     
     
